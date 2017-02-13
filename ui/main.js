@@ -1,2 +1,2 @@
 console.log('Loaded!');
-alert("hello this is jS");
+alert('hello this is jS');
