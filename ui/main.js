@@ -11,8 +11,8 @@ function moveRight (){
     marginLeft = marginLeft + 2;
     img.style.marginLeft = marginLeft + 'px';
     if (marginLeft > 1000 ) {
-        marginLeft = 0 ;
-        img.style.marginLeft = marginLeft + 'px';
+       // marginLeft = 0 ;
+            img.style.marginLeft = 0 + 'px';
         return;
     }
 }
