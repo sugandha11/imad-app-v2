@@ -1,24 +1,10 @@
 console.log('Loaded!');
 
-/*
-// change the text of document
-var element = document.getElementById('main-text');
-element.innerHTML = 'New Value';*/
+var button = document.getElementById('counter');
+var counter = 0;
 
-// move the image 
-var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight (){
-    marginLeft = marginLeft + 2;
-    img.style.marginLeft = marginLeft + 'px';
-    if (marginLeft > 1000 ) {
-       // marginLeft = 0 ;
-            img.style.marginLeft = 0 + 'px';
-        return;
-    }
-}
- img.onclick = function (){
-     var interval = setInterval ( moveRight, 50);
-     //img.style.marginLeft = '100px';
- }; 
- 
+button.onclick = function(){
+    counter +=1;
+    var span=document.getElementById('count');
+    span.innerHTML= counter.toString();
+};
