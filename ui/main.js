@@ -6,7 +6,7 @@ var counter = 0;
 button.onclick = function(){
     
     // Create a request object 
-    var reauuest = new XMLHttpRequest ();
+    var request = new XMLHttpRequest ();
     
    //capture the responce and store it in a variable
     request.onreadystatechange = function (){
