@@ -9,11 +9,13 @@ app.use(morgan('combined'));
 
 // you can optionally supply other values
 var config = {
-  host: 'db.imad.hasura-app.io',
-  port: '5432',
-  user: 'sugandha11',
-  password: process.env.DB_PASSWORD,
-  database: 'sugandha11',
+        user: 'sugandha11',
+        database: 'sugandha11',
+        host: 'db.imad.hasura-app.io',
+        port: '5432',
+        password: 'db-sugandha11-67191',
+       // password: process.env.DB_PASSWORD,
+
 };
 
 // create the pool somewhere globally so its lifetime
