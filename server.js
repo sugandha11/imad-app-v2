@@ -18,6 +18,17 @@ var config = {
 
 };
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
+app.get('/hash/:input', function (req, res) {
+    var hashedString=
+  res.send(path.join(hashedString);
+});
+
+
 // create the pool somewhere globally so its lifetime
 // lasts for as long as your app is running
 var pool = new Pool(config);
@@ -55,9 +66,7 @@ app.get('/submit-name', function (req, res) {
 });
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+
 
 app.get('/article-one',function (req, res){
     res.send('article one  is here!!');
