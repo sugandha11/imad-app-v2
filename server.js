@@ -22,10 +22,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+function hash(input,salt){
+    var hashed=crypto.pdkdf2Sync(input,salt,10000,512,'sha512');
+    return["pdkdf2","10000", salt, hashed.toString('hex')].join('$');
+    
+}
 
 app.get('/hash/:input', function (req, res) {
-    var hashedString=
-  res.send(path.join(hashedString);
+    var hashedString=hash(req.params.input,'this-is-some-ramdom-word');
+    res.send(hashedString);
 });
 
 
